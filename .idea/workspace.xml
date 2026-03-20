@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abea318a-497a-4438-a30d-4cd741b72b3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="abea318a-497a-4438-a30d-4cd741b72b3c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +21,7 @@
     <branch-grouping />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="homework/14.1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,21 +49,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for classes_test.TestClasProduct.test_init.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for classes_test.TestClassCategory.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for utils_test.TestFunctionReadJson.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for utils_test.TestFunctionReadJson.test_invalid_read_json.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for utils_test.TestFunctionReadJson.test_valid_read_json.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;homework/14.1&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Programs/Codes/PyCharm/Work2/data&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for classes_test.TestClasProduct.test_init.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassCategory.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassProduct.executor": "Run",
+    "Python tests.Python tests for utils_test.TestFunctionReadJson.executor": "Run",
+    "Python tests.Python tests for utils_test.TestFunctionReadJson.test_invalid_read_json.executor": "Run",
+    "Python tests.Python tests for utils_test.TestFunctionReadJson.test_valid_read_json.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.utils.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "#1 on homework/14.1",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Programs/Codes/PyCharm/Work2/data"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Programs\Codes\PyCharm\Work2\data" />
@@ -77,22 +76,7 @@
       <recent name="C:\Programs\Codes\PyCharm\Work2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for utils_test.TestFunctionReadJson.test_invalid_read_json">
-    <configuration name="Python tests for classes_test.TestClasProduct.test_init" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Work2" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;classes_test.TestClasProduct.test_init&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests for classes_test.TestClassProduct">
     <configuration name="Python tests for classes_test.TestClassCategory" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work2" />
       <option name="ENV_FILES" value="" />
@@ -105,6 +89,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;classes_test.TestClassCategory&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for classes_test.TestClassProduct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Work2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;classes_test.TestClassProduct&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -155,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct" />
         <item itemvalue="Python tests.Python tests for utils_test.TestFunctionReadJson.test_invalid_read_json" />
         <item itemvalue="Python tests.Python tests for utils_test.TestFunctionReadJson.test_valid_read_json" />
         <item itemvalue="Python tests.Python tests for utils_test.TestFunctionReadJson" />
         <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory" />
-        <item itemvalue="Python tests.Python tests for classes_test.TestClasProduct.test_init" />
       </list>
     </recent_temporary>
   </component>
