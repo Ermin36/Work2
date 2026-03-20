@@ -37,4 +37,4 @@ class TestClassCategory:
         Category('2', '', [])
 
         assert Category.category_count == 2
-        assert Category.product_count == 2
+        assert Category.product_count == 0

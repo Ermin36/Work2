@@ -34,12 +34,12 @@
     &quot;assignee&quot;: &quot;Ermin36&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Ermin36/Work2.git",
-    "accountId": "f805aafc-5f19-4f0b-ae68-ee7f32061f1b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Ermin36/Work2.git&quot;,
+    &quot;accountId&quot;: &quot;f805aafc-5f19-4f0b-ae68-ee7f32061f1b&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -51,21 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for classes_test.TestClasProduct.test_init.executor": "Run",
-    "Python tests.Python tests for classes_test.TestClassCategory.executor": "Run",
-    "Python tests.Python tests for utils_test.TestFunctionReadJson.executor": "Run",
-    "Python tests.Python tests for utils_test.TestFunctionReadJson.test_invalid_read_json.executor": "Run",
-    "Python tests.Python tests for utils_test.TestFunctionReadJson.test_valid_read_json.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "homework/14.1",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Programs/Codes/PyCharm/Work2/data"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for classes_test.TestClasProduct.test_init.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for classes_test.TestClassCategory.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for utils_test.TestFunctionReadJson.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for utils_test.TestFunctionReadJson.test_invalid_read_json.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for utils_test.TestFunctionReadJson.test_valid_read_json.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homework/14.1&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Programs/Codes/PyCharm/Work2/data&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Programs\Codes\PyCharm\Work2\data" />
