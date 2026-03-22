@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="abea318a-497a-4438-a30d-4cd741b72b3c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/classes_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/classes_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/utils_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/utils_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +104,7 @@
       <recent name="C:\Programs\Codes\PyCharm\Work2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for classes_test.TestClassCategory">
+  <component name="RunManager" selected="Python tests.Python tests for utils_test.TestFunctionReadJson">
     <configuration name="Python tests for classes_test.TestClassCategory" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work2" />
       <option name="ENV_FILES" value="" />
@@ -120,21 +117,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;classes_test.TestClassCategory&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for classes_test.TestClassCategory.test_add_product" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Work2" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;classes_test.TestClassCategory.test_add_product&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -183,13 +165,28 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for utils_test.TestFunctionReadJson" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Work2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;utils_test.TestFunctionReadJson&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for utils_test.TestFunctionReadJson" />
         <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory" />
         <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct" />
         <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct.test_set_price" />
         <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory.test_get_products" />
-        <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory.test_add_product" />
       </list>
     </recent_temporary>
   </component>

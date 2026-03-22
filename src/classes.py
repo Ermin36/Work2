@@ -84,7 +84,7 @@ class Category:
         :param new_product: новый продукт
         """
         self.__products.append(new_product)
-        self.product_count += 1
+        Category.product_count += 1
 
     @property
     def products(self) -> str:
