@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="abea318a-497a-4438-a30d-4cd741b72b3c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/class_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/class_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/function_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/function_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/status.json" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/status.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/z_145eef247bfb46b6_classes_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/z_145eef247bfb46b6_classes_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/z_145eef247bfb46b6_main_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/z_145eef247bfb46b6_main_py.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/classes_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/classes_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/utils_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/utils_test.py" afterDir="false" />
     </list>
@@ -44,10 +37,31 @@
     &quot;assignee&quot;: &quot;Ermin36&quot;
   }
 }</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDORr_9w87Md7FC&quot;,
+        &quot;number&quot;: 2
+      },
+      &quot;lastSeen&quot;: 1774170289571
+    }
+  ]
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:Ermin36/Work2.git&quot;,
     &quot;accountId&quot;: &quot;f805aafc-5f19-4f0b-ae68-ee7f32061f1b&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;Ermin36&quot;,
+    &quot;repository&quot;: &quot;Work2&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -61,27 +75,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for classes_test.TestClasProduct.test_init.executor": "Run",
-    "Python tests.Python tests for classes_test.TestClassCategory.executor": "Run",
-    "Python tests.Python tests for classes_test.TestClassCategory.test_add_product.executor": "Run",
-    "Python tests.Python tests for classes_test.TestClassCategory.test_get_products.executor": "Run",
-    "Python tests.Python tests for classes_test.TestClassProduct.executor": "Run",
-    "Python tests.Python tests for classes_test.TestClassProduct.test_create_class_as_dict.executor": "Run",
-    "Python tests.Python tests for classes_test.TestClassProduct.test_get_info.executor": "Run",
-    "Python tests.Python tests for classes_test.TestClassProduct.test_set_price.executor": "Run",
-    "Python tests.Python tests for utils_test.TestFunctionReadJson.executor": "Run",
-    "Python tests.Python tests for utils_test.TestFunctionReadJson.test_invalid_read_json.executor": "Run",
-    "Python tests.Python tests for utils_test.TestFunctionReadJson.test_valid_read_json.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "homework/14.1",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Programs/Codes/PyCharm/Work2/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for classes_test.TestClasProduct.test_init.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for classes_test.TestClassCategory.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for classes_test.TestClassCategory.test_add_product.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for classes_test.TestClassCategory.test_get_products.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for classes_test.TestClassProduct.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for classes_test.TestClassProduct.test_create_class_as_dict.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for classes_test.TestClassProduct.test_get_info.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for classes_test.TestClassProduct.test_set_price.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for utils_test.TestFunctionReadJson.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for utils_test.TestFunctionReadJson.test_invalid_read_json.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for utils_test.TestFunctionReadJson.test_valid_read_json.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#2 on homework/14.2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Programs/Codes/PyCharm/Work2/src&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Programs\Codes\PyCharm\Work2\src" />
@@ -93,7 +107,7 @@
       <recent name="C:\Programs\Codes\PyCharm\Work2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for classes_test.TestClassProduct.test_set_price">
+  <component name="RunManager" selected="Python tests.Python tests for classes_test.TestClassCategory">
     <configuration name="Python tests for classes_test.TestClassCategory" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work2" />
       <option name="ENV_FILES" value="" />
@@ -171,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct.test_set_price" />
         <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory" />
+        <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct" />
+        <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct.test_set_price" />
         <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory.test_get_products" />
         <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory.test_add_product" />
-        <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +231,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

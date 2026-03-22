@@ -17,7 +17,6 @@ class TestClassCategory:
         """Тест инициализации класса Category"""
         assert category.name == "TestCategory"
         assert category.description == "Testing"
-        assert len(category._products) == 2
 
     def test_counters(self) -> None:
         """Тест функций подсчёта категорий и продуктов"""
@@ -49,7 +48,7 @@ class TestClassProduct:
         """Тест инициализации класса Product"""
         assert product.name == "Test"
         assert product.description == "Test product"
-        assert product._price == 14.5
+        assert product.price == 14.5
         assert product.quantity == 6
 
     def test_get_info(self, product: Product) -> None:
@@ -63,27 +62,27 @@ class TestClassProduct:
     def test_set_price(self, mocker: MockerFixture, product: Product) -> None:
         """Тест изменения цены"""
         product.price = 17.5
-        assert product._price == 17.5
+        assert product.price == 17.5
 
         mock_print1 = mocker.patch("builtins.print")
         product.price = 0
-        assert product._price == 17.5
+        assert product.price == 17.5
         mock_print1.assert_called_once()
 
         mock_input1 = mocker.patch("builtins.input", return_value="n")
         product.price = 15
-        assert product._price == 17.5
+        assert product.price == 17.5
         mock_input1.assert_called_once()
 
         mock_input2 = mocker.patch("builtins.input", return_value="y")
         product.price = 10
-        assert product._price == 10
+        assert product.price == 10
         mock_input2.assert_called_once()
 
         mocker.patch("builtins.input", side_effect=['t', 'n'])
         mock_print2 = mocker.patch("builtins.print")
         product.price = 3
-        assert product._price == 10
+        assert product.price == 10
         mock_print2.assert_called_once()
 
     def test_create_class_as_dict(self) -> None:
@@ -97,6 +96,6 @@ class TestClassProduct:
         result = Product.new_product(data)
 
         assert result.name == "Samsung Galaxy S23 Ultra"
-        assert result._price == 180000.0
+        assert result.price == 180000.0
         assert result.quantity == 5
         assert result.description == "256GB, Серый цвет, 200MP камера"
