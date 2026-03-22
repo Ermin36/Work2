@@ -1,7 +1,10 @@
 from unittest.mock import MagicMock, mock_open
-from src.classes import Product, Category
-from src.utils import read_json
+
 from pytest_mock import MockerFixture
+
+from src.classes import Category, Product
+from src.utils import read_json
+
 
 class TestFunctionReadJson:
 
@@ -18,36 +21,26 @@ class TestFunctionReadJson:
                         "name": "Samsung Galaxy C23 Ultra",
                         "description": "256GB, Серый цвет, 200MP камера",
                         "price": 180000.0,
-                        "quantity": 5
+                        "quantity": 5,
                     },
-                    {
-                        "name": "Iphone 15",
-                        "description": "512GB, Gray space",
-                        "price": 210000.0,
-                        "quantity": 8
-                    },
-                    {
-                        "name": "Xiaomi Redmi Note 11",
-                        "description": "1024GB, Синий",
-                        "price": 31000.0,
-                        "quantity": 14
-                    }
-                ]
+                    {"name": "Iphone 15", "description": "512GB, Gray space", "price": 210000.0, "quantity": 8},
+                    {"name": "Xiaomi Redmi Note 11", "description": "1024GB, Синий", "price": 31000.0, "quantity": 14},
+                ],
             }
         ]
 
-        result: list[Category] = read_json('./testing/data.json')
+        result: list[Category] = read_json("./testing/data.json")
 
         assert isinstance(result[0], Category)
         assert result[0].description == "Test"
-        assert len(result[0].products) == 3
-        assert isinstance(result[0].products[0], Product)
+        assert len(result[0]._products) == 3
+        assert isinstance(result[0]._products[0], Product)
         file_mock.assert_called_once()
         read_mock.assert_called_once()
 
     def test_invalid_read_json(self) -> None:
         """Тест ошибки при не верном пути к файлу"""
 
-        result = read_json('./testing/data.json')
+        result = read_json("./testing/data.json")
 
         assert result == []
