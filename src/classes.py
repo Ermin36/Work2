@@ -58,11 +58,6 @@ class Product:
         else:
             print("Цена не должна быть нулевая или отрицательная")
 
-    @property
-    def info(self) -> str:
-        """Получить информацию о продукте"""
-        return f"{self.name}, {self._price} руб. Остаток: {self.quantity} шт."
-
 
 class Category:
     name: str
@@ -84,7 +79,7 @@ class Category:
         :param new_product: новый продукт
         """
         self._products.append(new_product)
-        self.product_count = len(self._products)
+        Category.product_count += 1
 
     @property
     def products(self) -> str:
@@ -92,6 +87,6 @@ class Category:
         result = ""
 
         for item in self._products:
-            result += item.info + "\n"
+            result += f"{item.name}, {item.price} руб. Остаток: {item.quantity} шт.\n"
 
         return result

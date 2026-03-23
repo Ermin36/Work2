@@ -52,10 +52,6 @@ class TestClassProduct:
         assert product._price == 14.5
         assert product.quantity == 6
 
-    def test_get_info(self, product: Product) -> None:
-        """Тест получения информации о продукте"""
-        assert product.info == "Test, 14.5 руб. Остаток: 7 шт."
-
     def test_get_price(self, product: Product) -> None:
         """Тест получения цены"""
         assert product.price == 14.5
