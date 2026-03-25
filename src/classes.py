@@ -23,6 +23,15 @@ class Product:
         if is_ok is False:
             Product.__products.append(self)
 
+    def __str__(self) -> str:
+        """Вывод строкового значения"""
+        return f"{self.name}, {self._price} руб. Остаток {self.quantity} шт."
+
+    def __add__(self, other: 'Product') -> float:
+        """Сложение двух классов"""
+        result = self._price * self.quantity + other._price * other.quantity
+        return result
+
     @classmethod
     def new_product(cls, product_data: dict) -> "Product":
         """Создать новый продукт из данных словаря"""
@@ -70,8 +79,29 @@ class Category:
         self.name = name
         self.description = description
         self._products = products
+        self.__counter = 0
+        self.__end = len(products)
         Category.category_count += 1
         Category.product_count = len(products)
+
+    def __str__(self) -> str:
+        """Вывод строковых данных"""
+        count = 0
+        for product in self._products:
+            count += product.quantity
+        return f"{self.name}, количество продуктов: {count} шт."
+
+    def __iter__(self) -> 'Category':
+        """Итератор класса"""
+        return self
+
+    def __next__(self) -> Product:
+        """Выдача следующего продукта"""
+        if self.__counter < self.__end:
+            self.__counter += 1
+            return self._products[self.__counter-1]
+        else:
+            raise StopIteration
 
     def add_product(self, new_product: Product) -> None:
         """
@@ -80,6 +110,7 @@ class Category:
         """
         self._products.append(new_product)
         Category.product_count += 1
+        self.__end = len(self._products)
 
     @property
     def products(self) -> str:
