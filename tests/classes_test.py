@@ -1,9 +1,7 @@
-from itertools import product
-
 import pytest
 from pytest_mock import MockerFixture
 
-from src.classes import Category, Product
+from src.classes import Category, Product, LawnGrass, Smartphone
 
 
 class TestClassCategory:
@@ -45,16 +43,23 @@ class TestClassCategory:
         assert count == 2
 
 
-    def test_add_product(self, category: Category) -> None:
+    def test_valid_add_product(self, category: Category) -> None:
         """Тест добавления нового продукта"""
         product1 = Product("Test", "testing", 14.2, 5)
         category.add_product(product1)
         assert category.product_count == 3
 
+    def test_invalid_add_product(self, category:Category) -> None:
+        """"""
+        with pytest.raises(TypeError) as err:
+            category.add_product("Test")
+
+        assert str(err.value) == "Не верный продукт"
+
     def test_get_products(self, category: Category) -> None:
         """Тест получения информации о продуктах"""
         result = category.products
-        assert result == "test1, 14.1 руб. Остаток: 8 шт.\ntest2, 23.1 руб. Остаток: 56 шт.\n"
+        assert result == "test1, 14.1 руб. Остаток: 10 шт.\ntest2, 23.1 руб. Остаток: 70 шт.\n"
 
 
 class TestClassProduct:
@@ -72,14 +77,24 @@ class TestClassProduct:
         product1 = Product("Test3", "Test product", 14.5, 1)
         assert str(product1) == "Test3, 14.5 руб. Остаток 1 шт."
 
-    def test_add(self) -> None:
-        """Тест сложения дву классов"""
+    def test_valid_add(self) -> None:
+        """Тест сложения двух классов"""
         product1 = Product("Test1", "test", 5.1, 10)
         product2 = Product('Test2', 'test', 7.2, 5)
 
         result = product1 + product2
 
         assert result == 87
+
+    def test_invalid_add(self) -> None:
+        """Тест функции на корректность ошибки"""
+        product1 = Product("Test1", "test", 5.1, 10)
+        product2 = Smartphone("Test11", 'test', 12.1, 5, 32.1, '1', 1, '1')
+
+        with pytest.raises(TypeError) as err:
+            product1 + product2
+
+        assert str(err.value) == "Типы продуктов должны быть одинаковыми"
 
     def test_get_price(self) -> None:
         """Тест получения цены"""
@@ -127,3 +142,27 @@ class TestClassProduct:
         assert result._price == 180000.0
         assert result.quantity == 5
         assert result.description == "256GB, Серый цвет, 200MP камера"
+
+
+class TestClassSmartphone:
+
+    def test_init(self) -> None:
+
+        result = Smartphone('Test', 'testing', 5.1, 1, 91.2, 'model', 12, 'color')
+
+        assert result.name == "Test"
+        assert result.efficiency == 91.2
+        assert result.model == 'model'
+        assert result.memory == 12
+        assert result.color == 'color'
+
+class TestClassLawnGrows:
+
+    def test_init(self) -> None:
+
+        result = LawnGrass('Test', 'testing', 12.1, 1, "cont", 'ger', 'color')
+
+        assert result.name == "Test"
+        assert result.country == 'cont'
+        assert result.germination_period == 'ger'
+        assert result.color == 'color'

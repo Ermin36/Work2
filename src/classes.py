@@ -27,8 +27,10 @@ class Product:
         """Вывод строкового значения"""
         return f"{self.name}, {self._price} руб. Остаток {self.quantity} шт."
 
-    def __add__(self, other: 'Product') -> float:
+    def __add__(self, other: "Product") -> float:
         """Сложение двух классов"""
+        if type(self) is not type(other):
+            raise TypeError("Типы продуктов должны быть одинаковыми")
         result = self._price * self.quantity + other._price * other.quantity
         return result
 
@@ -68,6 +70,53 @@ class Product:
             print("Цена не должна быть нулевая или отрицательная")
 
 
+class Smartphone(Product):
+    efficiency: float
+    model: str
+    memory: int
+    color: str
+
+    def __init__(
+        self,
+        name: str,
+        description: str,
+        price: float,
+        quantity: int,
+        efficiency: float,
+        model: str,
+        memory: int,
+        color: str,
+    ):
+        """Инициализация класса"""
+        super().__init__(name, description, price, quantity)
+        self.efficiency = efficiency
+        self.model = model
+        self.memory = memory
+        self.color = color
+
+
+class LawnGrass(Product):
+    country: str
+    germination_period: str
+    color: str
+
+    def __init__(
+        self,
+        name: str,
+        description: str,
+        price: float,
+        quantity: int,
+        country: str,
+        germination_period: str,
+        color: str,
+    ):
+        """Инициализация класса"""
+        super().__init__(name, description, price, quantity)
+        self.country = country
+        self.germination_period = germination_period
+        self.color = color
+
+
 class Category:
     name: str
     description: str
@@ -91,7 +140,7 @@ class Category:
             count += product.quantity
         return f"{self.name}, количество продуктов: {count} шт."
 
-    def __iter__(self) -> 'Category':
+    def __iter__(self) -> "Category":
         """Итератор класса"""
         return self
 
@@ -99,7 +148,7 @@ class Category:
         """Выдача следующего продукта"""
         if self.__counter < self.__end:
             self.__counter += 1
-            return self._products[self.__counter-1]
+            return self._products[self.__counter - 1]
         else:
             raise StopIteration
 
@@ -108,6 +157,8 @@ class Category:
         Добавление нового продукта в список
         :param new_product: новый продукт
         """
+        if not issubclass(new_product.__class__, Product):
+            raise TypeError("Не верный продукт")
         self._products.append(new_product)
         Category.product_count += 1
         self.__end = len(self._products)

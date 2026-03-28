@@ -21,7 +21,7 @@
     <branch-grouping />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="homework/14.2" />
+        <entry key="$PROJECT_DIR$" value="homework/15.1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,22 +32,22 @@
     &quot;assignee&quot;: &quot;Ermin36&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Ermin36/Work2.git",
-    "accountId": "f805aafc-5f19-4f0b-ae68-ee7f32061f1b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Ermin36/Work2.git&quot;,
+    &quot;accountId&quot;: &quot;f805aafc-5f19-4f0b-ae68-ee7f32061f1b&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "Ermin36",
-    "repository": "Work2"
+    &quot;owner&quot;: &quot;Ermin36&quot;,
+    &quot;repository&quot;: &quot;Work2&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -65,19 +65,29 @@
     "Python tests.Python tests for classes_test.TestClassCategory.executor": "Run",
     "Python tests.Python tests for classes_test.TestClassCategory.test_add_product.executor": "Run",
     "Python tests.Python tests for classes_test.TestClassCategory.test_get_products.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassCategory.test_invalid_add_product.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassCategory.test_iter_next.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassCategory.test_str.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassCategory.test_valid_add_product.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassLawnGrows.executor": "Run",
     "Python tests.Python tests for classes_test.TestClassProduct.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassProduct.test_add.executor": "Run",
     "Python tests.Python tests for classes_test.TestClassProduct.test_create_class_as_dict.executor": "Run",
     "Python tests.Python tests for classes_test.TestClassProduct.test_get_info.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassProduct.test_invalid_add.executor": "Run",
     "Python tests.Python tests for classes_test.TestClassProduct.test_set_price.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassProduct.test_str.executor": "Run",
+    "Python tests.Python tests for classes_test.TestClassSmartphone.test_init.executor": "Run",
     "Python tests.Python tests for utils_test.TestFunctionReadJson.executor": "Run",
     "Python tests.Python tests for utils_test.TestFunctionReadJson.test_invalid_read_json.executor": "Run",
     "Python tests.Python tests for utils_test.TestFunctionReadJson.test_valid_read_json.executor": "Run",
     "Python.main.executor": "Run",
     "Python.utils.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#3 on homework/14.2",
+    "git-widget-placeholder": "homework/16.1",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Programs/Codes/PyCharm/Work2/src"
+    "last_opened_file_path": "C:/Programs/Codes/PyCharm/Work2/src",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -91,8 +101,8 @@
       <recent name="C:\Programs\Codes\PyCharm\Work2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for utils_test.TestFunctionReadJson">
-    <configuration name="Python tests for classes_test.TestClassCategory" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Python tests for classes_test.TestClassCategory.test_invalid_add_product" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work2" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,11 +113,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;classes_test.TestClassCategory&quot;" />
+      <option name="_new_target" value="&quot;classes_test.TestClassCategory.test_invalid_add_product&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for classes_test.TestClassCategory.test_get_products" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for classes_test.TestClassCategory.test_valid_add_product" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work2" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,11 +128,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;classes_test.TestClassCategory.test_get_products&quot;" />
+      <option name="_new_target" value="&quot;classes_test.TestClassCategory.test_valid_add_product&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for classes_test.TestClassProduct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for classes_test.TestClassLawnGrows" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work2" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,11 +143,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;classes_test.TestClassProduct&quot;" />
+      <option name="_new_target" value="&quot;classes_test.TestClassLawnGrows&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for classes_test.TestClassProduct.test_set_price" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for classes_test.TestClassProduct.test_invalid_add" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work2" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,11 +158,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;classes_test.TestClassProduct.test_set_price&quot;" />
+      <option name="_new_target" value="&quot;classes_test.TestClassProduct.test_invalid_add&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for utils_test.TestFunctionReadJson" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for classes_test.TestClassSmartphone.test_init" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Work2" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,17 +173,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;utils_test.TestFunctionReadJson&quot;" />
+      <option name="_new_target" value="&quot;classes_test.TestClassSmartphone.test_init&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for utils_test.TestFunctionReadJson" />
-        <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct.test_set_price" />
-        <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct" />
-        <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory.test_get_products" />
-        <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory" />
+        <item itemvalue="Python tests.Python tests for classes_test.TestClassLawnGrows" />
+        <item itemvalue="Python tests.Python tests for classes_test.TestClassSmartphone.test_init" />
+        <item itemvalue="Python tests.Python tests for classes_test.TestClassProduct.test_invalid_add" />
+        <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory.test_valid_add_product" />
+        <item itemvalue="Python tests.Python tests for classes_test.TestClassCategory.test_invalid_add_product" />
       </list>
     </recent_temporary>
   </component>
