@@ -26,6 +26,10 @@ class Product(BaseProduct, ProductLog):
     __products: list["Product"] = []
 
     def __init__(self, name: str, description: str, price: float, quantity: int):
+
+        if quantity <= 0:
+            raise ValueError('Товар с нулевым количеством не может быть добавлен')
+
         super().__init__(name, description, price, quantity)
         self.name = name
         self.description = description
@@ -203,3 +207,13 @@ class Category:
             result += f"{item.name}, {item.price} руб. Остаток: {item.quantity} шт.\n"
 
         return result
+
+    def middle_price(self) -> float:
+        """Подсчёт средней цены продуктов"""
+        sum_price = sum(item.price for item in self.__products)
+        count = len(self.__products)
+        try:
+            out = sum_price / count
+            return out
+        except ZeroDivisionError:
+            return 0.0

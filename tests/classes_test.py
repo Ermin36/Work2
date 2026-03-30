@@ -1,5 +1,6 @@
 import pytest
 from pytest_mock import MockerFixture
+from unicodedata import category
 
 from src.classes import Category, Product, LawnGrass, Smartphone
 
@@ -10,19 +11,19 @@ test_category = Category(
 class TestClassCategory:
 
     @pytest.fixture
-    def category(self) -> Category:
+    def test_data(self) -> Category:
         """Инициализация тестового класса"""
         return test_category
 
-    def test_init(self, category: Category) -> None:
+    def test_init(self, test_data: Category) -> None:
         """Тест инициализации класса Category"""
-        assert category.name == "TestCategory"
-        assert category.description == "Testing"
-        assert len(category) == 2
+        assert test_data.name == "TestCategory"
+        assert test_data.description == "Testing"
+        assert len(test_data) == 2
 
-    def test_str(self, category: Category) -> None:
+    def test_str(self, test_data: Category) -> None:
         """Тест выдачи информации"""
-        assert str(category) == 'TestCategory, количество продуктов: 16 шт.'
+        assert str(test_data) == 'TestCategory, количество продуктов: 16 шт.'
 
     def test_counters(self) -> None:
         """Тест функций подсчёта категорий и продуктов"""
@@ -43,35 +44,53 @@ class TestClassCategory:
 
         assert count == 2
 
-    def test_get_products(self, category: Category) -> None:
+    def test_get_products(self, test_data: Category) -> None:
         """Тест получения информации о продуктах"""
-        result = category.products
+        result = test_data.products
         assert result == "test1, 14.1 руб. Остаток: 2 шт.\ntest2, 23.1 руб. Остаток: 14 шт.\n"
 
-    def test_valid_add_product(self, category: Category) -> None:
+    def test_valid_add_product(self, test_data: Category) -> None:
         """Тест добавления нового продукта"""
         product1 = Product("Test", "testing", 14.2, 5)
-        category.add_product(product1)
-        assert category.product_count == 3
+        test_data.add_product(product1)
+        assert test_data.product_count == 3
 
     # noinspection PyTypeChecker
-    def test_invalid_add_product(self, category:Category) -> None:
+    def test_invalid_add_product(self, test_data: Category) -> None:
         """Тест функции на ошибку"""
         with pytest.raises(TypeError) as err:
-            category.add_product('test')
+            test_data.add_product('test')
 
         assert str(err.value) == "Не верный продукт"
+
+    def test_middle_price(self) -> None:
+        """Тест функции получения средней стоимости продуктов и ошибки"""
+        test_data = Category('Test', 'testing', [])
+
+        assert test_data.middle_price() == 0.0
+
+        test_data.add_product(Product('test1', 'test', 20.0, 1))
+        test_data.add_product(Product('test2', 'test', 40.0, 2))
+
+        result = test_data.middle_price()
+
+        assert result == 30.0
 
 
 class TestClassProduct:
 
-    def test_init(self) -> None:
+    def test_init_valid(self) -> None:
         """Тест инициализации класса Product"""
         product1 = Product("tester", "Test product", 14.5, 1)
         assert product1.name == "tester"
         assert product1.description == "Test product"
         assert product1._price == 14.5
         assert product1.quantity == 1
+
+    def test_init_invalid(self) -> None:
+        """Тест ошибки"""
+        with pytest.raises(ValueError, match="Товар с нулевым количеством не может быть добавлен"):
+             Product("tester", "Test product", 14.5, 0)
 
     def test_log(self, mocker: MockerFixture) -> None:
         """Тест класса ProductLog"""
