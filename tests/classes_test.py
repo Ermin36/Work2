@@ -49,10 +49,11 @@ class TestClassCategory:
         category.add_product(product1)
         assert category.product_count == 3
 
+    # noinspection PyTypeChecker
     def test_invalid_add_product(self, category:Category) -> None:
-        """"""
+        """Тест функции на ошибку"""
         with pytest.raises(TypeError) as err:
-            category.add_product("Test")
+            category.add_product('test')
 
         assert str(err.value) == "Не верный продукт"
 

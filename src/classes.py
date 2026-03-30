@@ -1,4 +1,24 @@
-class Product:
+from abc import ABC, abstractmethod
+
+
+class BaseProduct(ABC):
+
+    @property
+    @abstractmethod
+    def price(self) -> float: ...
+
+    @price.setter
+    @abstractmethod
+    def price(self, new_price: float) -> None: ...
+
+
+class ProductLog:
+
+    def __init__(self, *args, **kwargs):
+        print(f'{self.__class__.__name__}{args}')
+
+
+class Product(BaseProduct, ProductLog):
     name: str
     description: str
     _price: float
@@ -6,6 +26,7 @@ class Product:
     __products: list["Product"] = []
 
     def __init__(self, name: str, description: str, price: float, quantity: int):
+        super().__init__(name, description, price, quantity)
         self.name = name
         self.description = description
         self._price = price
@@ -29,6 +50,8 @@ class Product:
 
     def __add__(self, other: 'Product') -> float:
         """Сложение двух классов"""
+        if self.__class__ is not other.__class__:
+            raise TypeError('Типы продуктов должны быть одинаковыми')
         result = self._price * self.quantity + other._price * other.quantity
         return result
 
@@ -155,6 +178,8 @@ class Category:
         Добавление нового продукта в список
         :param new_product: новый продукт
         """
+        if not isinstance(new_product, Product):
+            raise TypeError('Не верный продукт')
         self._products.append(new_product)
         Category.product_count += 1
         self.__end = len(self._products)
