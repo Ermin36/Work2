@@ -3,31 +3,32 @@ from pytest_mock import MockerFixture
 
 from src.classes import Category, Product, LawnGrass, Smartphone
 
+test_category = Category(
+            "TestCategory", "Testing", [Product("test1", "test", 14.1, 2), Product("test2", "desc", 23.1, 14)]
+        )
 
 class TestClassCategory:
 
     @pytest.fixture
     def category(self) -> Category:
         """Инициализация тестового класса"""
-        return Category(
-            "TestCategory", "Testing", [Product("test1", "test", 14.1, 2), Product("test2", "desc", 23.1, 14)]
-        )
+        return test_category
 
     def test_init(self, category: Category) -> None:
         """Тест инициализации класса Category"""
         assert category.name == "TestCategory"
         assert category.description == "Testing"
-        assert len(category._products) == 2
+        assert len(category) == 2
 
     def test_str(self, category: Category) -> None:
         """Тест выдачи информации"""
-        assert str(category) == 'TestCategory, количество продуктов: 32 шт.'
+        assert str(category) == 'TestCategory, количество продуктов: 16 шт.'
 
     def test_counters(self) -> None:
         """Тест функций подсчёта категорий и продуктов"""
         Category("3", "", [])
 
-        assert Category.category_count == 3
+        assert Category.category_count == 2
         assert Category.product_count == 0
 
     def test_iter_next(self) -> None:
@@ -42,6 +43,10 @@ class TestClassCategory:
 
         assert count == 2
 
+    def test_get_products(self, category: Category) -> None:
+        """Тест получения информации о продуктах"""
+        result = category.products
+        assert result == "test1, 14.1 руб. Остаток: 2 шт.\ntest2, 23.1 руб. Остаток: 14 шт.\n"
 
     def test_valid_add_product(self, category: Category) -> None:
         """Тест добавления нового продукта"""
@@ -57,11 +62,6 @@ class TestClassCategory:
 
         assert str(err.value) == "Не верный продукт"
 
-    def test_get_products(self, category: Category) -> None:
-        """Тест получения информации о продуктах"""
-        result = category.products
-        assert result == "test1, 14.1 руб. Остаток: 10 шт.\ntest2, 23.1 руб. Остаток: 70 шт.\n"
-
 
 class TestClassProduct:
 
@@ -72,6 +72,14 @@ class TestClassProduct:
         assert product1.description == "Test product"
         assert product1._price == 14.5
         assert product1.quantity == 1
+
+    def test_log(self, mocker: MockerFixture) -> None:
+        """Тест класса ProductLog"""
+        print_mock = mocker.patch('builtins.print')
+
+        Product('Test', '5', 12.0, 4)
+
+        print_mock.assert_called_once_with("Product('Test', '5', 12.0, 4)")
 
     def test_str(self) -> None:
         """Тест получения информации о продукте"""
@@ -156,6 +164,7 @@ class TestClassSmartphone:
         assert result.model == 'model'
         assert result.memory == 12
         assert result.color == 'color'
+
 
 class TestClassLawnGrows:
 
