@@ -43,3 +43,8 @@
    | Smartphone(Product) | Smartphone(name: str, description: str, price: float, quantity: int, efficiency: float, model: str, memory: int, color: str) |
    | LawnGrass(Product)  | LawnGrass(name: str, description: str, price: float, quantity: int, country: str, germination_period: str, color: str)       |
    | Category            | Category(name: str, description: str, products: list[Product])                                                               |
+
+### Обновление
+
+Реализован абстракт-класс `BaseProduct` и лог-класс `ProductLog` для логирования создания новых
+классов `Product`
