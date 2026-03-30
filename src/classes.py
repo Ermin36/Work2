@@ -1,4 +1,24 @@
-class Product:
+from abc import ABC, abstractmethod
+
+
+class BaseProduct(ABC):
+    """Абстрактный класс конструктор для Product"""
+    @property
+    @abstractmethod
+    def price(self) -> float: ...
+
+    @price.setter
+    @abstractmethod
+    def price(self, new_price: float) -> None: ...
+
+
+class ProductLog:
+    """Класс логирования создания класса"""
+    def __init__(self, *args, **kwargs):
+        print(f'{self.__class__.__name__}{args}')
+
+
+class Product(BaseProduct, ProductLog):
     name: str
     description: str
     _price: float
@@ -6,6 +26,7 @@ class Product:
     __products: list["Product"] = []
 
     def __init__(self, name: str, description: str, price: float, quantity: int):
+        super().__init__(name, description, price, quantity)
         self.name = name
         self.description = description
         self._price = price
@@ -29,6 +50,8 @@ class Product:
 
     def __add__(self, other: 'Product') -> float:
         """Сложение двух классов"""
+        if self.__class__ is not other.__class__:
+            raise TypeError('Типы продуктов должны быть одинаковыми')
         result = self._price * self.quantity + other._price * other.quantity
         return result
 
@@ -118,35 +141,45 @@ class LawnGrass(Product):
 class Category:
     name: str
     description: str
-    _products: list[Product]
+    __products: list[Product]
     category_count: int = 0
     product_count: int = 0
+    __counter: int
+    __end: int
 
     def __init__(self, name: str, description: str, products: list[Product]):
         self.name = name
         self.description = description
-        self._products = products
-        self.__counter = 0
-        self.__end = len(products)
+        self.__products = products
         Category.category_count += 1
         Category.product_count = len(products)
+
+    def __len__(self) -> int:
+
+        return len(self.__products)
+
+    def __getitem__(self, item: int) -> Product:
+
+        return self.__products[item]
 
     def __str__(self) -> str:
         """Вывод строковых данных"""
         count = 0
-        for product in self._products:
-            count += product.quantity
+        for item in self.__products:
+            count += item.quantity
         return f"{self.name}, количество продуктов: {count} шт."
 
     def __iter__(self) -> 'Category':
         """Итератор класса"""
+        self.__counter = 0
+        self.__end = len(self.__products)
         return self
 
     def __next__(self) -> Product:
         """Выдача следующего продукта"""
         if self.__counter < self.__end:
             self.__counter += 1
-            return self._products[self.__counter-1]
+            return self.__products[self.__counter-1]
         else:
             raise StopIteration
 
@@ -155,16 +188,18 @@ class Category:
         Добавление нового продукта в список
         :param new_product: новый продукт
         """
-        self._products.append(new_product)
+        if not isinstance(new_product, Product):
+            raise TypeError('Не верный продукт')
+        self.__products.append(new_product)
         Category.product_count += 1
-        self.__end = len(self._products)
+        self.__end = len(self.__products)
 
     @property
     def products(self) -> str:
         """Получение списка продуктов"""
         result = ""
 
-        for item in self._products:
+        for item in self.__products:
             result += f"{item.name}, {item.price} руб. Остаток: {item.quantity} шт.\n"
 
         return result

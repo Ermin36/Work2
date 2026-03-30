@@ -33,8 +33,8 @@ class TestFunctionReadJson:
 
         assert isinstance(result[0], Category)
         assert result[0].description == "Test"
-        assert len(result[0]._products) == 3
-        assert isinstance(result[0]._products[0], Product)
+        assert len(result[0]) == 3
+        assert isinstance(result[0][0], Product)
         file_mock.assert_called_once()
         read_mock.assert_called_once()
 
